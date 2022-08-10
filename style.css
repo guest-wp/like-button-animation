@@ -11,8 +11,8 @@
     transition: color 200ms;
   }
   
-  .like.blue svg {
-    color: dodgerblue;
+  .like.yellow svg {
+    color: gold;
   }
   
   .like.pink svg {
