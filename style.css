@@ -1,0 +1,59 @@
+.like {
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .like svg {
+    color: #121212;
+    transition: color 200ms;
+  }
+  
+  .like.blue svg {
+    color: dodgerblue;
+  }
+  
+  .like.pink svg {
+    color: #ff2391;
+  }
+  
+  .like.active svg {
+    animation: bounce 300ms cubic-bezier(.5, 1.75, .75, 1.25);
+  }
+  
+  @keyframes bounce {
+    0% {transform: scale(1.0);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1.0);}
+  }
+  
+  .like > svg > path {
+    display: block;
+  }
+  
+  .like:before {
+    content: '';
+    display: block;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    border: solid 1px #ff2391;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: -1;
+  }
+  
+  .like.pink.active::before {
+    transform: scale(600%);
+    border: solid 1px #ff239100;
+    transition: transform 500ms, border 500ms;
+  }
+  
+  .like.blue.active::before {
+    transform: scale(600%);
+    border: solid 1px #1e90ff00;
+    transition: transform 500ms, border 500ms;
+  }
